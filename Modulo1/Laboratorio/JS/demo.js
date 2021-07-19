@@ -1,5 +1,3 @@
-
-
 document.getElementById("avatar").src = "../img/pato.png";
 document.getElementById("name").value = "Pablo";
 document.getElementById("lastName").value = "Laborde González";
