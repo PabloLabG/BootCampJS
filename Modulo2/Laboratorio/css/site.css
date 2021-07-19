@@ -1,0 +1,42 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+  .hotel-fila {
+    
+    width: 100%;
+    
+  }
+
+  
+
+  .hotel-descripcion > span{
+    font-weight: bold;
+
+  }
+
+  .hotel-descripcion {
+     width: 50%;
+  }
+
+  .hotel-box {
+    border: 1px solid #D7DBDD;
+    background-color: #F7F9F9;
+    border-radius: 3px;
+    padding: 16px;
+   
+    display: inline-block;
+    width: 40%;
+  }
+
+  
+  #hotel-foto
+  {
+    width: 30%;  
+    height: auto;  
+    text-align: center;    
+  }
+
+  
+
+ 
