@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .marco {
+            width: 50%;
+            margin: auto;
+            padding: 12px;
+            border: 3px solid slategray;
+            border-radius: 3px;          
+        }
+
+        #ResultOperacion {
+            border: 3px solid black;
+            text-align: end;
+            width: 100%;
+            height: fit-content;
+            margin-bottom: 24px;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: x-large;
+        }
+
+        .controlesDiv {            
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .boton {
+            border: 1px solid black;
+            border-radius: 3px;
+            width: 24px;
+            text-align: center;
+            margin-left: 12px;
+            cursor: pointer;
+        }
+
+        .boton:hover {background-color: #3e8e41}
+
+        .boton:active {
+            background-color: #3e8e41;
+            transform: translateY(-1px);
+        }
+
+        input[type=number] {
+            text-align: right;
+            margin-left: 12px;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>    
+    <div class="marco">
+        <div id="ResultOperacion">0.0</div>
+        <div class="controlesDiv">            
+            <input type="number" name="operadorA" id="operadorA" placeholder="0.0">
+
+            <div id="btnSumar" class="boton" title="Sumar" >+</div>
+            <div id="btnRestar" class="boton" title="Restar">-</div>
+            <div id="btnMultiplicar" class="boton" title="Multiplicar">*</div>
+            <div id="btnDividir" class="boton" title="Dividir">/</div>
+        </div>
+    </div>
+    <br>
+    <br>
+    <div class="marco">          
+            <label for="selHabitacion">Habitación:</label>
+            <select name="selHabitacion" id="selHabitacion">
+                <option value="100">Standard</option>
+                <option value="120">Junior Suite</option>
+                <option value="150">Suite</option>
+            </select>
+
+            <label for="chkSPA">Uso de SPA</label>
+            <input type="checkbox" name="chkSPA" id="chkSPA">
+
+            <label for="selOcupacion">Ocupación:</label>
+            <select name="selOcupacion" id="selOcupacion">
+                <option value="0.75">Individual</option>
+                <option value="1">Doble</option>
+                <option value="1.25">Triple</option>
+            </select>
+            <br>
+            <label for="numNoches">Número de noches:</label>
+            <input type="number" name="numNoches" id="numNoches" style="width: 50px;">
+
+            <label for="numNochesParking">Noches de parkig:</label>
+            <input type="number" name="numNochesParking" id="numNochesParking" style="width: 50px;">
+            <br>
+            <button id="btnCalcular">Calcular</button>
+
+    </div>
+    <script src="JS/app.js"></script>
+</body>
+</html>
