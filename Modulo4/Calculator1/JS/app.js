@@ -50,8 +50,6 @@ var fDividir = (operadorA, operadorB) => {
     document.getElementById("ResultOperacion").innerText = _result;    
 }
 
-
-
 // Añadir los eventos Click
 document.getElementById("btnSumar").addEventListener("click", () => { fSumar(document.getElementById('operadorA').value, document.getElementById('operadorB').value); });
 document.getElementById("btnRestar").addEventListener("click", () => { fRestar(document.getElementById('operadorA').value, document.getElementById('operadorB').value); });
