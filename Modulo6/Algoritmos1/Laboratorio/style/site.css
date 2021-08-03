@@ -1,0 +1,74 @@
+
+form {
+    width: 50%;
+    margin: 0 auto;
+    font-family: Arial, Helvetica, sans-serif;
+    border: solid 1px grey ;
+    border-radius: 3px;
+    padding: 15px;
+    max-width: 490px;
+}
+
+h1 { text-align: center;}
+
+.line-product > input[type="number"] {
+        width: 50px;
+        text-align: center;
+}
+
+.line-product {
+    display: block;
+    height: 34px;
+}
+
+.line-number {
+    width: 5%;
+    display: inline-block;
+}
+
+.line-description {
+    display: inline-block;
+    width: 81%;
+    text-align: right;
+    padding-right: 8px;
+}
+
+.line-amount {
+    display: inline-block;
+    width: 10%;
+}
+
+.cart-button {
+    display: block;
+}
+
+#btnCalcular {
+    color:white;
+    background-color: teal;
+    height: 42px;
+    width: 100%;
+    border: none;
+    border-radius: 5px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.cart-total { 
+    text-align: right;
+    padding-top: 10px;
+    font-weight: bold;
+}
+
+.SubTotal {
+    padding-bottom: 10px;
+}
+
+.IVA {
+    padding-bottom: 10px;
+}
+
+.TOTAL {
+    font-weight: bolder;
+    border-top: solid black 1px;
+}
