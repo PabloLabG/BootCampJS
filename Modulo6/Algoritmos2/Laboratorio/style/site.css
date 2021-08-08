@@ -1,0 +1,21 @@
+form {
+    width: 50%;
+    margin: 0 auto;
+    font-family: Arial, Helvetica, sans-serif;
+    border: solid 1px grey ;
+    border-radius: 3px;
+    padding: 15px;
+    max-width: 490px;
+}
+
+h1 {text-align: center;}
+
+textarea {
+    width: 100%;
+}
+
+.botonera {
+    text-align: center;
+    margin-top: 16px;
+    margin-bottom: 16px;
+}
