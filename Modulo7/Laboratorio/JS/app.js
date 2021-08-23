@@ -36,10 +36,10 @@ let imgCaso2 = `<html>
 </body>
 </html>`;
 
-let patternIMG = /<img(?:\n+|\s+)src="\1(.*)"(?:\n+|\s+)\/>+/gim;
+let patternIMG = /<img(?:\n*|\s*)src="(.*)"(?:\n*|\s*)\/>+/gim;
 
 console.log("BUSCAR SRC en: ", imgCaso1);
 console.log(patternIMG.exec(imgCaso1));
 
 console.log("BUSCAR SRC en: ", imgCaso2);
-console.log(patternIMG.exec(imgCaso2));
+console.log(imgCaso2.match(patternIMG));
