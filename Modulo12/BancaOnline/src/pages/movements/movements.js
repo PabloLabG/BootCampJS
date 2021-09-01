@@ -1,6 +1,6 @@
 
 import { history } from '../../core/router/history';
-import { getAllMovements } from './movements-api';
+import { getAllMovements, getMovementsById } from './movements-api';
 import { getAccount } from '../account/account.api'; 
 import { mapMovementListFromApiToVm } from './movements-mappers';
 import { mapAcccountFromApiToVm } from '../account/account.mappers';
@@ -10,8 +10,8 @@ const params = history.getParams();
 const isEditMode = Boolean(params.id);
 
 if (isEditMode) {
-    getAllMovements().then((movements) => {
-        const viewModelMovementList = mapMovementListFromApiToVm(movements).filter(movement => movement.accountId === params.id);
+    getMovementsById(params.id).then((movements) => {
+        const viewModelMovementList = mapMovementListFromApiToVm(movements);
         addMovementRows(viewModelMovementList);
 
         getAccount(params.id).then((account) => {        
