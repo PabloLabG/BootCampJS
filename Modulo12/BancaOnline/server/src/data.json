@@ -117,5 +117,20 @@
       "accountId": "3"
     }
   ],
-  "transfer": []
+  "transfer": [
+    {
+      "accountId": "1",
+      "iban": "ES24 0123 0123 0123 0123 1223",
+      "name": "Pablo Laborde González",
+      "amount": "1",
+      "concept": "1",
+      "notes": "",
+      "day": "1",
+      "month": "1",
+      "year": "2022",
+      "date": "2022-1-1",
+      "email": "",
+      "id": 1
+    }
+  ]
 }

@@ -1,3 +1,4 @@
+import moment from 'moment';
 
 const amountValidation = (fieldValidatorArgs) => {
     const {value} = fieldValidatorArgs;
@@ -63,4 +64,22 @@ const yearValidation = (fieldValidatorArgs) => {
     return validationResult;
 }
 
-export {amountValidation, dayValidation, monthValidation, yearValidation};
+const dateValidation = (fieldValidatorArgs) => {
+    const {value} = fieldValidatorArgs;
+    const validationResult = {
+        succeeded: false,
+        type: 'MY_DATE_VALIDATOR',
+        message: 'Fecha no válida o menor a HOY.'
+    };
+    
+    var momentDate = moment(value, 'YYYY-MM-DD', false);
+
+    if (momentDate.isValid() && momentDate.toDate() >= new Date()) {
+        validationResult.succeeded = true;
+        validationResult.message = '';
+    }
+
+    return validationResult;
+};
+
+export {amountValidation, dayValidation, monthValidation, yearValidation, dateValidation};
