@@ -1,8 +1,8 @@
 import Axios from 'axios';
 
 const url = `${process.env.BASE_API_URL}/properties`;
-export const getPropetyList = () => {
-    return Axios.get(url).then((response) => response.data);
+export const getPropetyList = (queryParams) => {
+    return Axios.get(`${url}?${queryParams}`).then((response) => response.data);
 };
 
 

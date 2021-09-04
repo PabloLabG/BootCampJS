@@ -18,3 +18,33 @@ const mapPropetyFromApiToViewModel = (property) => {
 const getRoomWord = (rooms) => { return rooms > 1 ? 'habitaciones' : 'habitación'; };
 
 const truncateNotes = (text) => { return text.length > 240 ? `${text.substring(0, 236)}...` : text; };
+
+export const mapFilterToQueryParams = (filter) => {
+    let queryParam = '';
+
+    if(filter.saleTypeId) {
+        queryParam = `${queryParam}saleTypeIds_like=${filter.saleTypeId}&`;
+    }
+
+    if(filter.provinceId) {
+        queryParam = `${queryParam}provinceId=${filter.provinceId}&`;
+    }    
+
+    if(filter.minRooms) {
+        queryParam = `${queryParam}rooms_gte=${filter.minRooms}&`;
+    }
+
+    if(filter.minBathRooms) {
+        queryParam = `${queryParam}bathrooms_gte=${filter.minBathRooms}&`;        
+    }
+
+    if(filter.minPrice) {
+        queryParam = `${queryParam}price_gte=${filter.minPrice}&`;        
+    }
+
+    if(filter.maxPrice) {
+        queryParam = `${queryParam}price_lte=${filter.maxPrice}&`;        
+    }
+
+    return queryParam.slice(0, -1);
+};
