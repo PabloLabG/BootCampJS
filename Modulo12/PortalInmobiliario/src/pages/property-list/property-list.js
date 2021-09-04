@@ -71,12 +71,9 @@ onUpdateField('select-max-price', (event) => {
 });
 
 
-
-onSubmitForm('search-button', () => {
-    console.log({filter});
+onSubmitForm('search-button', () => {    
     const queryParams = mapFilterToQueryParams(filter);
-    clearPropertyRows();
-    console.log({queryParams});
+    clearPropertyRows();    
 
     getPropetyList(queryParams).then((propertyList) => {
         loadPropertyList(propertyList);
