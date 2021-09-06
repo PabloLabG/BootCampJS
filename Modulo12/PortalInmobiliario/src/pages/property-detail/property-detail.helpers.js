@@ -10,7 +10,6 @@ const setMainFeatures = property => {
 
 const setEquipments = property => {
   const list = document.getElementById('equipments');
-
   property.equipments.forEach(equipment => {
     const li = document.createElement('li');
     li.textContent = equipment;

@@ -8,9 +8,9 @@ const mapPropetyFromApiToViewModel = (property) => {
         id: property.id,
         title: property.title,
         rooms: `${property.rooms} ${getRoomWord(property.rooms)}`,
-        squareMeter: `${property.squareMeter}m2`,
+        squareMeter: `${property.squareMeter} m2`,
         notes: `${truncateNotes(property.notes)}`,
-        price: `${property.price.toLocaleString('de', {style:'currency', currency:'EUR', useGrouping: true})}`,
+        price: `${property.price.toLocaleString('de', {style:'currency', currency:'EUR', useGrouping: true })}`,
         image: Array.isArray(property.images) ? property.images[0] : ''
     };
 };
