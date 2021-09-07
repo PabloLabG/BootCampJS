@@ -75,7 +75,7 @@ const setValue = (element, value) => {
 
 const onSetValue = (id, value) => {
   const element = document.getElementById(id);
-  console.log({ element });
+
   if (element) {
     setValue(element, value);
   }
